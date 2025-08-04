@@ -1,11 +1,25 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, Image } from 'react-native';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <View style={styles.logos}>
+        <Text>
+          logos
+        </Text>
+      </View>
+      <View style={styles.caixabotao}>
+        <TouchableOpacity style={styles.botao}>
+        <Text style={styles.textobotao}>
+          Já tenho uma conta
+        </Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.botao}>
+        <Text style={styles.textobotao}>
+          Criar conta
+        </Text>
+        </TouchableOpacity>
+      </View>
     </View>
   );
 }
@@ -13,7 +27,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#005594',
     alignItems: 'center',
     justifyContent: 'center',
   },
