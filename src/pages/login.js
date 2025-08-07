@@ -1,25 +1,4 @@
-
-import { NavigationContainer } from '@react-navigation/native'; 
-import { createStackNavigator } from '@react-navigation/stack';
-
-const Stack = createStackNavigator();
-
-import Home from './src/Components/Home';
-
-export default function App() {
-  return (
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="principal" component={Home} options={{title: "PRIMEIRO", }}/>
-      </Stack.Navigator>
-    </NavigationContainer> 
-  );
-}
-
-
-
 import { StyleSheet, Text, View, TouchableOpacity, Image } from 'react-native';
-
 
 export default function App() {
 
@@ -30,13 +9,13 @@ export default function App() {
           {/* source={require('./assets/logo.png')} */}
         </Image>
       </View>
-      <View style={styles.caixabotao} onPress={irParaHome}>
+      <View style={styles.caixabotao} >
         <TouchableOpacity style={styles.botao}>
         <Text style={styles.textobotao}>
           Já tenho uma conta
         </Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.botao} onPress={irParaHome}>
+        <TouchableOpacity style={styles.botao}>
         <Text style={styles.textobotao}>
           Criar conta
         </Text>
