@@ -1,14 +1,20 @@
-import { StyleSheet, Text, View, TouchableOpacity, Image } from 'react-native';
-import Login from './src/pages/login';
+import { StyleSheet, Text, View, TouchableOpacity, Image, Button } from 'react-native';
+import {router} from 'expo-router';
 
 
 export default function App() {
 
+function Login() {
+    router.navigate("/src/Components/Login.js");
+  }
+
   return (
     <View style={styles.container}>
-      <Login/>
+      <View>
+        <Button title="inicioddddddsdd " onProgress={Login}></Button>
+      </View>
     </View>
-  );r
+  );
 }
 
 const styles = StyleSheet.create({
@@ -17,5 +23,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#005594',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  button: {
+    backgroundColor: '#FBB800',
   },
 });
