@@ -83,3 +83,37 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
 });
+
+import { StyleSheet, Text, View, TouchableOpacity, Image, Button, Imput } from 'react-native';
+import { router } from 'expo-router';
+
+
+export default function App() {
+
+function Login() {
+    router.navigate("/src/Components/Login.js");
+  }
+
+  return (
+    <View style={styles.container}>
+      <View>
+        <TouchableOpacity style={styles.button} onPress={Login}>
+          <Text>bartat</Text>
+        </TouchableOpacity>
+      </View>
+    </View>
+  );
+}
+
+
+// const styles = StyleSheet.create({
+//   container: {
+//     flex: 1,
+//     backgroundColor: '#005594',
+//     alignItems: 'center',
+//     justifyContent: 'center',
+//   },
+//   button: {
+//     backgroundColor: '#ff0000ff',
+//   },
+// });

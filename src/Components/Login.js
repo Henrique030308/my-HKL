@@ -1,13 +1,17 @@
 import { StyleSheet, Text, View, TouchableOpacity, Image } from 'react-native';
+import { router } from 'expo-router';
 
-export default function App() {
+
+
+export default function Login() {
+
+function Cadastro() {
+    router.navigate("/Casdastro.js");
+}  
 
   return (
     <View style={styles.container}>
       <View style={styles.logos}>
-        <Image>
-          {/* source={require('./assets/logo.png')} */}
-        </Image>
       </View>
       <View style={styles.caixabotao} >
         <TouchableOpacity style={styles.botao}>
@@ -22,7 +26,7 @@ export default function App() {
         </TouchableOpacity>
       </View>
     </View>
-  );r
+  );
 }
 
 const styles = StyleSheet.create({
