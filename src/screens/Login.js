@@ -3,7 +3,7 @@ import { router } from 'expo-router';
 
 
 
-export default function Login() {
+export default function Login( navigation) {
 
 function Cadastro() {
     router.navigate("/Casdastro.js");
@@ -14,7 +14,7 @@ function Cadastro() {
       <View style={styles.logos}>
       </View>
       <View style={styles.caixabotao} >
-        <TouchableOpacity style={styles.botao}>
+        <TouchableOpacity style={styles.botao} onPress={bata}>
         <Text style={styles.textobotao}>
           Já tenho uma conta
         </Text>
