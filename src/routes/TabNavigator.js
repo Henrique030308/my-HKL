@@ -12,6 +12,7 @@ const Tab = createBottomTabNavigator();
 export default function TabNavigator() {
   return (
     <Tab.Navigator
+      
       screenOptions={{
         headerShown: false,
       }}
@@ -57,7 +58,7 @@ export default function TabNavigator() {
         component={Compras}
         options={{
           tabBarActiveTintColor: "#000000ff",
-          tabBarLabel: "compras",
+          tabBarLabel: "Compras",
         }}
       />
 
