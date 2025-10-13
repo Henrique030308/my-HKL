@@ -11,6 +11,7 @@ const Tab = createBottomTabNavigator();
 export default function TabNavigator() {
   return (
     <Tab.Navigator
+      
       screenOptions={{
         headerShown: false,
         tabBarStyle: { backgroundColor: "#FBB800" },
@@ -22,7 +23,7 @@ export default function TabNavigator() {
         options={{
           tabBarActiveTintColor: "#005594",
           tabBarLabel: "Início",
-          tabBarIcon: ({ focused, color, size }) => (
+          tabBarIcon: () => (
             <Image
               style={{ width: size ?? 24, height: size ?? 24, tintColor: color }}
               source={
@@ -40,7 +41,7 @@ export default function TabNavigator() {
         options={{
           tabBarActiveTintColor: "#005594",
           tabBarLabel: "Carrinho",
-          tabBarIcon: ({ focused, color, size }) => (
+          tabBarIcon: () => (
             <Image
               style={{ width: size ?? 24, height: size ?? 24, tintColor: color }}
               source={
@@ -58,7 +59,7 @@ export default function TabNavigator() {
         options={{
           tabBarActiveTintColor: "#005594",
           tabBarLabel: "Saldo",
-          tabBarIcon: ({ focused, color, size }) => (
+          tabBarIcon: () => (
             <Image
               style={{ width: size ?? 24, height: size ?? 24, tintColor: color }}
               source={
@@ -74,9 +75,18 @@ export default function TabNavigator() {
         name="User"
         component={Perfil}
         options={{
-          tabBarActiveTintColor: "#005594",
-          tabBarLabel: "Perfil",
-          tabBarIcon: ({ focused, color, size }) => (
+          tabBarActiveTintColor: "#000000ff",
+          tabBarLabel: "compras",
+        }}
+      />
+
+      <Tab.Screen
+        name="Informações"
+        component={Transferencia}
+        options={{
+          tabBarActiveTintColor: "#000000ff",
+          tabBarLabel: "informações",
+                    tabBarIcon: () => (
             <Image
               style={{ width: size ?? 24, height: size ?? 24, tintColor: color }}
               source={
