@@ -1,6 +1,5 @@
 import { StyleSheet, Text, View, TouchableOpacity, Image } from 'react-native';
 
-
 export default function Telainicial({ navigation }) {
   function Login() {
     navigation.navigate("Login");
