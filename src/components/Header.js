@@ -25,8 +25,8 @@ const styles = StyleSheet.create({
         paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight || 0 : 0,
     },
     logo: {
-        width: 90,
-        height: 70,
+        width: 110,
+        height: 100,
         resizeMode: 'contain',
         marginHorizontal: 10,
         alignSelf: 'center',

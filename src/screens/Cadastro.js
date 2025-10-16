@@ -1,27 +1,48 @@
-import { StyleSheet, Text, View, TouchableOpacity, Image } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, Image, TextInput, } from "react-native";
 import React from "react";
+import Header from "../components/Header";
+import Telefone from "../../assets/img/telefone.png";
 
 export default function Cadastro({ navigation }) {
   return (
     <View style={styles.container}>
-      <View style={styles.logos}>
-      </View>
+      <Header />
       <View>
-        <Text style={styles.titulo}>
-          LOGIN
-        </Text>
+        <Text style={styles.titulo}>CADASTRO</Text>
       </View>
-      <View style={styles.caixabotao} >
-<TouchableOpacity style={styles.botao} >
-  <Text style={styles.textobotao}>
-    Já tenho uma conta
-  </Text>
-</TouchableOpacity>
+      <View style={styles.caixabotao}>
+        <Text style={styles.cadastro}>Nome Completo</Text>
+        <TextInput
+        style={styles.input}
+        keyboardType="text"
+        />
+        <Text style={styles.cadastro}>E-mail</Text>
+        <TextInput
+        style={styles.input}
+        keyboardType="text"
+        />
+        <Text style={styles.cadastro}>Senha</Text>
+        <TextInput
+        style={styles.input}
+        keyboardType="text"
+        />
+        <Text style={styles.cadastro}>Confirmar Senha</Text>
+        <TextInput
+        style={styles.input}
+        keyboardType="text"
+        />
+        <View style={styles.telefone}>
+          <Image source={Telefone} style={{ width: 20, height: 20, marginTop: 15}} />
+          <TextInput
+          style={styles.inputTelefone}
+          placeholder="Telefone"
+          keyboardType="number"
+          />
+        </View>
         <TouchableOpacity style={styles.botao}>
-        <Text style={styles.textobotao}>
-          Criar conta
-        </Text>
+          <Text style={styles.login}>CRIAR CONTA</Text>
         </TouchableOpacity>
+        <Text style={styles.texto}>Já tem uma conta? <Text style={styles.textoDois}>Entre aqui</Text></Text>
       </View>
     </View>
   );
@@ -30,43 +51,72 @@ export default function Cadastro({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#ffffffff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  logos: {
-    flex: 2,
-    alignItems: 'center',
-    justifyContent: 'flex-start',
-    width: '100%',
-    backgroundColor: '#005',
+    backgroundColor: "#ffffffff",
+    alignItems: "center",
+    justifyContent: "center",
   },
   titulo: {
-    color: '#fbb800',
-    fontSize: 70,
-    fontWeight: 'bold',
+    color: "#fbb800",
+    fontSize: 45,
+    fontWeight: "bold",
     paddingTop: 15,
+    paddingBottom: 35,
+    textDecorationLine: "underline",
   },
   caixabotao: {
     flex: 4,
-    alignItems: 'center',
-    width: '100%',
-    height: '100%',
+    flexDirection: "column",
+    alignItems: "center",
+    width: "100%",
+    textAlign: "left",
+    backgroundColor: "#ffffff",
   },
-  botao: {
-    backgroundColor: '#FBE9BA',
-    width: 250,
+  cadastro: {
+    color: "#000000",
+    fontSize: 25,
+    paddingBottom: 10,
+    paddingTop: 15,
+    alignSelf: "flex-start",
+    marginLeft: 30,
+  },
+  input: {
+    width: 360,
     height: 50,
     borderRadius: 10,
-    alignItems: 'center',
-    justifyContent: 'center',
-    marginBottom: 20,
-    borderColor: '#fbb800',
-    borderWidth: 2,
+    borderWidth: 3,
+    backgroundColor: "#fbe8ba",
+    borderColor: "#fab802",
   },
-  textobotao: {
-    color: '#fff',
+  telefone: {
+    flexDirection: "row",
+    paddingTop: 30,
+    width: 350,
+    borderBottomWidth: 0.5,
+    borderColor: "#000000",
+  },
+  inputTelefone: {
     fontSize: 18,
-    fontWeight: 'bold',
+    color: "#000000",
+  },
+  botao: {
+    marginTop: 40,
+    backgroundColor: "#fbb800",
+    height: 50,
+    width: 350,
+    borderRadius: 16,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  login: {
+    color: "#fff",
+    fontSize: 35,
+    fontWeight: "bold",
+  },
+  texto: {
+    paddingTop: 25,
+    fontSize: 16,
+  },
+  textoDois: {
+    color: "#fbb800",
   },
 });

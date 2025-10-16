@@ -1,4 +1,5 @@
 import { StyleSheet, Text, View, TouchableOpacity, Image } from 'react-native';
+import Header from '../components/Header';
 
 export default function Telainicial({ navigation }) {
   function Login() {
@@ -10,8 +11,7 @@ export default function Telainicial({ navigation }) {
 
   return (
     <View style={styles.container}>
-      <View style={styles.logos}>
-      </View>
+      <Header />
       <View style={styles.caixabotao} >
 <TouchableOpacity style={styles.botao} onPress={Login}>
   <Text style={styles.textobotao}>
@@ -35,18 +35,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  logos: {
+  caixabotao: {
     flex: 1,
     alignItems: 'center',
-    justifyContent: 'flex-start',
-    width: '100%',
-    backgroundColor: '#005',
-  },
-  caixabotao: {
-    flex: 4,
-    alignItems: 'center',
     justifyContent: 'center',
-    paddingTop: 450,
     width: '100%',
     height: '100%',
   },
@@ -63,5 +55,6 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontSize: 18,
     fontWeight: 'bold',
+    textDecorationLine: 'underline',
   },
 });

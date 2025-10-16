@@ -23,7 +23,7 @@ export default function TabNavigator() {
         options={{
           tabBarActiveTintColor: "#005594",
           tabBarLabel: "Início",
-          tabBarIcon: () => (
+          tabBarIcon: ({ focused, color, size }) => (
             <Image
               style={{ width: size ?? 24, height: size ?? 24, tintColor: color }}
               source={
@@ -41,7 +41,7 @@ export default function TabNavigator() {
         options={{
           tabBarActiveTintColor: "#005594",
           tabBarLabel: "Carrinho",
-          tabBarIcon: () => (
+          tabBarIcon: ({ focused, color, size }) => (
             <Image
               style={{ width: size ?? 24, height: size ?? 24, tintColor: color }}
               source={
@@ -59,7 +59,7 @@ export default function TabNavigator() {
         options={{
           tabBarActiveTintColor: "#005594",
           tabBarLabel: "Saldo",
-          tabBarIcon: () => (
+          tabBarIcon: ({ focused, color, size }) => (
             <Image
               style={{ width: size ?? 24, height: size ?? 24, tintColor: color }}
               source={
@@ -86,7 +86,7 @@ export default function TabNavigator() {
         options={{
           tabBarActiveTintColor: "#000000ff",
           tabBarLabel: "informações",
-                    tabBarIcon: () => (
+          tabBarIcon: ({ focused, color, size }) => (
             <Image
               style={{ width: size ?? 24, height: size ?? 24, tintColor: color }}
               source={
