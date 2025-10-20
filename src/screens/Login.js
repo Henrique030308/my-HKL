@@ -5,6 +5,7 @@ import {
   TouchableOpacity,
   Image,
   TextInput,
+  Touchable,
 } from "react-native";
 import React from "react";
 import Header from "../components/Header";
@@ -33,14 +34,16 @@ export default function Cadastro({ navigation }) {
           style={styles.input}
           keyboardType="text"
         />
-        <Text style={styles.texto}>Não lembra a senha?</Text>
+        <TouchableOpacity style={{marginRight: 220}}>
+          <Text style={styles.texto}>Não lembra a senha?</Text>
+        </TouchableOpacity>
         <TouchableOpacity
           style={styles.botao}
           onPress={() => navigation.navigate("TabNavigator")}
         >
           <Text style={styles.login}>ENTRAR</Text>
         </TouchableOpacity>
-        <Image source={Divisor} style={{ marginTop: 30, marginBottom: 30 }} />
+        <Image source={Divisor} style={{ marginTop: 30, marginBottom: 15 }} />
         <TouchableOpacity style={styles.outros}>
           <Image source={Google} style={{ marginLeft: 15 }} />
           <Text style={styles.meios}>Entrar com o Google</Text>
@@ -53,6 +56,7 @@ export default function Cadastro({ navigation }) {
           <Image source={Telefone} style={{ marginLeft: 15 }} />
           <Text style={styles.meios}>Entrar com o Telefone</Text>
         </TouchableOpacity>
+        <Text style={styles.text}>Não tem uma conta ainda?<TouchableOpacity style={styles.touchable}><Text style={styles.button}> Cadastre-se aqui</Text></TouchableOpacity></Text>
       </View>
     </View>
   );
@@ -131,5 +135,15 @@ const styles = StyleSheet.create({
   meios: {
     fontSize: 23,
     marginLeft: 10,
+  },
+  text: {
+    paddingTop: 30,
+    fontSize: 16,
+  },
+  touchable: {
+    marginTop: 8
+  },
+  button: {
+    color: "#fbb800",
   },
 });
