@@ -42,7 +42,7 @@ export default function Cadastro({ navigation }) {
         <TouchableOpacity style={styles.botao}>
           <Text style={styles.login}>CRIAR CONTA</Text>
         </TouchableOpacity>
-        <Text style={styles.texto}>Já tem uma conta? <Text style={styles.textoDois}>Entre aqui</Text></Text>
+        <Text style={styles.texto}>Já tem uma conta? <TouchableOpacity style={styles.touchable}><Text style={styles.textoDois}>Entre aqui</Text></TouchableOpacity></Text>
       </View>
     </View>
   );
@@ -115,6 +115,9 @@ const styles = StyleSheet.create({
   texto: {
     paddingTop: 25,
     fontSize: 16,
+  },
+  touchable: {
+    marginTop: 8
   },
   textoDois: {
     color: "#fbb800",

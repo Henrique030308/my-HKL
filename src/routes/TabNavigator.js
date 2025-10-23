@@ -36,7 +36,7 @@ export default function TabNavigator() {
         }}
       />
       <Tab.Screen
-        name="Cart"
+        name="Compras"
         component={Compras}
         options={{
           tabBarActiveTintColor: "#005594",
@@ -54,7 +54,7 @@ export default function TabNavigator() {
         }}
       />
       <Tab.Screen
-        name="Local"
+        name="Saldo"
         component={Transferencia}
         options={{
           tabBarActiveTintColor: "#005594",
@@ -75,7 +75,7 @@ export default function TabNavigator() {
         name="User"
         component={Perfil}
         options={{
-          tabBarActiveTintColor: "#000000ff",
+          tabBarActiveTintColor: "#005594",
           tabBarLabel: "compras",
         }}
       />
@@ -84,7 +84,7 @@ export default function TabNavigator() {
         name="Informações"
         component={Transferencia}
         options={{
-          tabBarActiveTintColor: "#000000ff",
+          tabBarActiveTintColor: "#005594",
           tabBarLabel: "informações",
           tabBarIcon: ({ focused, color, size }) => (
             <Image
